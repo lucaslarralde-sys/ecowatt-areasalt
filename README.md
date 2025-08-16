@@ -1,0 +1,1 @@
+Colocá tu video real en public/video/hero.mp4 y reemplazá las fotos en public/img/areas/areaX-Y.jpg

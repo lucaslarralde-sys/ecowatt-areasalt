@@ -1,0 +1,46 @@
+:root{--blue:#0b4a8b;--green:#1e9e49;--text:#0b1b2b}
+*{box-sizing:border-box}html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text)}
+img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit}
+.container{width:min(1200px,92vw);margin-inline:auto}
+/* Header */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid #e6edf5}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand img{height:42px}.nav{display:flex;gap:18px;align-items:center}.nav a{font-weight:600;color:#0f2233}
+.btn{display:inline-block;background:var(--green);color:#fff;border-radius:999px;padding:10px 16px;font-weight:800}
+.btn.btn-ghost{background:transparent;border:2px solid #fff;color:#fff}
+/* Hero */
+.hero{position:relative;min-height:70vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,25,41,.70),rgba(11,25,41,.25))}
+.hero-content{position:relative;z-index:1;padding:56px 0}
+.eyebrow{letter-spacing:.12em;font-weight:800;font-size:.85rem;color:#a7f3d0;margin:0 0 .4rem}
+.hero h1{margin:.2rem 0 .5rem;font-size:clamp(28px,4vw,54px);line-height:1.07}.sub{opacity:.95;max-width:800px}.cta-row{display:flex;gap:12px;margin-top:14px}
+/* Bands */
+.band{padding:clamp(28px,5vw,48px) 0}.band-white{background:#fff}
+.band-image{position:relative;background-image:url('public/img/banda-agua.jpg');background-size:cover;background-position:center;color:#fff;min-height:240px;display:flex;align-items:center}
+.band-image .band-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,25,41,.55),rgba(11,25,41,.15))}
+.band-green{background:linear-gradient(0deg,#1b934e,#1ca75a);color:#fff}.band-slogan{position:relative;font-weight:800;font-size:clamp(18px,2.2vw,26px);margin:0}
+/* Alternating area sections */
+.area-section{padding:40px 0;background:#fff}
+.area-inner{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.area-section.reverse .area-inner{direction:rtl}
+.area-section.reverse .area-inner > *{direction:ltr}
+.col-text h3{margin:0 0 .4rem;font-size:clamp(22px,2.2vw,30px);color:#0f2233}
+.col-text p{margin:0;color:#3e5668;line-height:1.55}
+.col-photos .photo-band{position:relative;border-radius:14px;overflow:hidden;background:#f3faf6;border:1px solid #dceee4}
+.col-photos .color-strip{position:absolute;inset:0 0 auto 0;height:64px;background:linear-gradient(90deg,var(--blue),var(--green));opacity:.85}
+.gallery{position:relative;display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:80px 10px 10px}
+.gallery img{border-radius:8px;cursor:pointer;object-fit:cover;aspect-ratio:4/3;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+/* Partners */
+.partners{display:flex;flex-wrap:wrap;gap:56px;justify-content:center;align-items:center}
+.partner img{height:48px;width:auto;opacity:.95;transition:transform .2s ease,opacity .2s ease}
+.partner:hover img{transform:translateY(-2px);opacity:1}
+/* Footer */
+.footer{background:#0a1220;color:#cbd5e1;padding:26px 0}.footer a{color:#fff}
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;z-index:80}
+.lightbox[hidden]{display:none}
+.lightbox-img{max-width:90vw;max-height:85vh;border-radius:10px;box-shadow:0 24px 80px rgba(0,0,0,.4)}
+.lightbox-close{position:absolute;top:16px;right:16px;background:#ffffff; border:0; padding:8px 10px; border-radius:8px; cursor:pointer}
+/* Responsive */
+@media (max-width:900px){.area-inner{grid-template-columns:1fr}.col-photos{order:2}.col-text{order:1}}
